@@ -1,6 +1,6 @@
 # VIM plugins
 
-So many struggles to figure out how to setup the VIM plugins manually. Here is my struggle for them.
+So many struggles to figure out how to setup the VIM plugins manually. Here is my struggle for them. VIM 8 is required.
 
 ## Procedure
 
