@@ -4,7 +4,7 @@ So many struggles to figure out how to setup the VIM plugins manually. Here is m
 
 ## Procedure
 
-### Create `.vim`
+### How to build this
 
 ```bash
 mkdir ~/.vim
@@ -17,6 +17,16 @@ git submodule add https://github.com/rakr/vim-one.git colors/start/one
 git submodule add https://github.com/vim-airline/vim-airline plugins/start/vim-airline
 git commit -m "..."
 git push
+```
+
+### How to configure it
+
+```bash
+mkdir ~/.vim
+cd ~/.vim
+git clone https://github.com/jeonghanlee/pack
+cd pack
+git submodule update --init ./
 ```
 
 ### Restart it
