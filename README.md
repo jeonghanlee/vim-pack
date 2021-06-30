@@ -27,6 +27,7 @@ cd ~/.vim
 git clone https://github.com/jeonghanlee/pack
 cd pack
 git submodule update --init ./
+ln -snf .vimrc ~/.vimrc
 ```
 
 ### Restart it
