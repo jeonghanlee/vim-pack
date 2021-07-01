@@ -20,5 +20,5 @@
 	path = plugins/start/spelunker
 	url = https://github.com/kamykn/spelunker.vim
 [submodule "/home/jeonglee/.vim/pack/plugins/start/popup-menu"]
-	path = /home/jeonglee/.vim/pack/plugins/start/popup-menu
+	path = plugins/start/popup-menu
 	url = https://github.com/kamykn/popup-menu.nvim
