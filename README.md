@@ -15,6 +15,8 @@ git submodule add https://github.com/scrooloose/nerdtree plugins/start/nerdtree
 git submodule add https://github.com/Xuyuanp/nerdtree-git-plugin plugins/start/nerdtree-git-plugin
 git submodule add https://github.com/rakr/vim-one.git colors/start/one
 git submodule add https://github.com/vim-airline/vim-airline plugins/start/vim-airline
+git submodule add https://github.com/voldikss/vim-floaterm plugins/start/vim-floaterm
+git submodule add https://github.com/vim-syntastic/syntastic plugins/start/syntastic
 git commit -m "..."
 git push
 ```
