@@ -37,5 +37,24 @@ bash init.bash
 | :---: |
 |**Figure 1** : VIM screen with the pack configuration. |
 
+### Plugins List
+
+* nerdtree: https://github.com/scrooloose/nerdtree
+* nerdtree-git-plugin: https://github.com/Xuyuanp/nerdtree-git-plugin
+* one: https://github.com/rakr/vim-one.git
+* vim-airline: https://github.com/vim-airline/vim-airline
+* vim-floaterm: https://github.com/voldikss/vim-floaterm
+* syntastic: https://github.com/vim-syntastic/syntastic
+* spelunker: https://github.com/kamykn/spelunker.vim
+* popup-menu: https://github.com/kamykn/spelunker.vim
+
+
+### Update submodules 
+
+```bash
+bash submodule_update.bash
+```
+
+
 ## References
 [1] https://medium.com/@paulodiovani/installing-vim-8-plugins-with-the-native-pack-system-39b71c351fea
