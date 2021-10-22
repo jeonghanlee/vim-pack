@@ -28,8 +28,7 @@ mkdir ~/.vim
 cd ~/.vim
 git clone https://github.com/jeonghanlee/pack
 cd pack
-git submodule update --init ./
-ln -snf .vimrc ~/.vimrc
+bash init.bash
 ```
 
 ### Restart it
