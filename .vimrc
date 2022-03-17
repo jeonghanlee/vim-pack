@@ -148,6 +148,9 @@ set shiftwidth=4
 set tabstop=4
 
 
+" Mouse middle copy
+set mouse=r
+
 "------------------------------------------------------------
 " Mappings {{{1
 "
