@@ -9,14 +9,15 @@ So many struggles to figure out how to setup the VIM plugins manually. Here is m
 ```bash
 mkdir ~/.vim
 cd ~/.vim
-git clone https://github.com/jeonghanlee/pack
-cd pack
+git clone https://github.com/jeonghanlee/vim-pack
+cd vim-pack
 git submodule add https://github.com/scrooloose/nerdtree plugins/start/nerdtree
 git submodule add https://github.com/Xuyuanp/nerdtree-git-plugin plugins/start/nerdtree-git-plugin
 git submodule add https://github.com/rakr/vim-one.git colors/start/one
 git submodule add https://github.com/vim-airline/vim-airline plugins/start/vim-airline
 git submodule add https://github.com/voldikss/vim-floaterm plugins/start/vim-floaterm
 git submodule add https://github.com/vim-syntastic/syntastic plugins/start/syntastic
+git submodule add https://github.com/JuliaEditorSupport/julia-vim.git plugins/start/julia-vim
 git commit -m "..."
 git push
 ```
@@ -26,8 +27,8 @@ git push
 ```bash
 mkdir ~/.vim
 cd ~/.vim
-git clone https://github.com/jeonghanlee/pack
-cd pack
+git clone https://github.com/jeonghanlee/vim-pack
+cd vim-pack
 bash init.bash
 ```
 
@@ -47,7 +48,7 @@ bash init.bash
 * syntastic: https://github.com/vim-syntastic/syntastic
 * spelunker: https://github.com/kamykn/spelunker.vim
 * popup-menu: https://github.com/kamykn/spelunker.vim
-
+* julia-vim: https://github.com/JuliaEditorSupport/julia-vim
 
 ### Update submodules 
 

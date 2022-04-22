@@ -22,3 +22,6 @@
 [submodule "plugins/start/popup-menu"]
 	path = plugins/start/popup-menu
 	url = https://github.com/kamykn/popup-menu.nvim
+[submodule "plugins/start/julia-vim"]
+	path = plugins/start/julia-vim
+	url = https://github.com/JuliaEditorSupport/julia-vim.git
