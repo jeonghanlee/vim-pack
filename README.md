@@ -1,6 +1,6 @@
 # VIM plugins
 
-So many struggles to figure out how to setup the VIM plugins manually. Here is my struggle for them. VIM 8 is required.
+So many struggles to figure out how to setup the VIM plugins using built-in package management. Here is my struggle for them. VIM 8 is required.
 
 ## Procedure
 
@@ -9,8 +9,8 @@ So many struggles to figure out how to setup the VIM plugins manually. Here is m
 ```bash
 mkdir ~/.vim
 cd ~/.vim
-git clone https://github.com/jeonghanlee/vim-pack
-cd vim-pack
+git clone https://github.com/jeonghanlee/vim-pack pack
+cd pack
 git submodule add https://github.com/scrooloose/nerdtree plugins/start/nerdtree
 git submodule add https://github.com/Xuyuanp/nerdtree-git-plugin plugins/start/nerdtree-git-plugin
 git submodule add https://github.com/rakr/vim-one.git colors/start/one
@@ -28,7 +28,7 @@ git push
 mkdir ~/.vim
 cd ~/.vim
 git clone https://github.com/jeonghanlee/vim-pack
-cd vim-pack
+cd pack
 bash init.bash
 ```
 
