@@ -164,6 +164,18 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'default'
-let g:airline_powerline_fonts=1
+set encoding=utf-8
+" air-line
+let g:airline_powerline_fonts = 0
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+
+

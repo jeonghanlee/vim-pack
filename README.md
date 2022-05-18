@@ -31,6 +31,10 @@ git clone https://github.com/jeonghanlee/vim-pack
 cd pack
 bash init.bash
 ```
+### Required packages
+
+powerline package is required
+
 
 ### Restart it
 
