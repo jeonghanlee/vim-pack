@@ -164,18 +164,10 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
-set encoding=utf-8
-" air-line
-let g:airline_powerline_fonts = 0
+set guifont=Hack\ Nerd\ Font:h14
 
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-
-" unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
