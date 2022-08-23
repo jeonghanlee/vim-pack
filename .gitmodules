@@ -25,3 +25,6 @@
 [submodule "plugins/start/julia-vim"]
 	path = plugins/start/julia-vim
 	url = https://github.com/JuliaEditorSupport/julia-vim.git
+[submodule "plugins/start/taglist"]
+	path = plugins/start/taglist
+	url = https://github.com/yegappan/taglist
