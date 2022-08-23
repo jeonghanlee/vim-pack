@@ -53,6 +53,7 @@ powerline package is required
 * spelunker: https://github.com/kamykn/spelunker.vim
 * popup-menu: https://github.com/kamykn/spelunker.vim
 * julia-vim: https://github.com/JuliaEditorSupport/julia-vim
+* taglist: https://github.com/yegappan/taglist
 
 ### Update submodules 
 
@@ -60,6 +61,11 @@ powerline package is required
 bash submodule_update.bash
 ```
 
+### Required Packages
+
+* taglist: exuberant-ctags (sudo apt install exuberant-ctags) 
+
+exuberant-ctags
 
 ## References
 [1] https://medium.com/@paulodiovani/installing-vim-8-plugins-with-the-native-pack-system-39b71c351fea
