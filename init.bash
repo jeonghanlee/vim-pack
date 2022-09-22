@@ -9,3 +9,5 @@ sudo apt install powerline exuberant-ctags
 
 git submodule update --init ./
 ln -snf "${SC_TOP}/.vimrc" "${HOME}/.vimrc"
+ln -snf "${SC_TOP}/.ctags" "${HOME}/.ctags"
+
