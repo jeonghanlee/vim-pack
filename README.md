@@ -33,8 +33,10 @@ bash init.bash
 ```
 ### Required packages
 
-powerline package is required
 
+```bash
+sudo apt install exuberant-ctags powerline
+```
 
 ### Restart it
 
