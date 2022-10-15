@@ -28,7 +28,7 @@ git push
 mkdir ~/.vim
 cd ~/.vim
 git clone https://github.com/jeonghanlee/vim-pack
-cd pack
+cd vim-pack
 bash init.bash
 ```
 ### Required packages
