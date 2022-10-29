@@ -36,6 +36,9 @@ bash init.bash
 
 ```bash
 sudo apt install exuberant-ctags powerline
+
+sudo dnf install ctags-etags vim-powerline 
+
 ```
 
 ### Restart it
