@@ -164,6 +164,17 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
+
+set guifont=Hack\ Nerd\ Font:h14
+
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+" Spelunker.vim
+set nospell
 " Enable spelunker.vim. (default: 1)
 " 1: enable
 " 0: disable
@@ -220,10 +231,10 @@ let g:spelunker_disable_auto_group = 1
 augroup spelunker
   autocmd!
   " Setting for g:spelunker_check_type = 1:
-  autocmd BufWinEnter,BufWritePost *.vim,*.js,*.jsx,*.json,*.md call spelunker#check()
+  autocmd BufWinEnter,BufWritePost *.vim,*.js,*.jsx,*.json call spelunker#check()
 
   " Setting for g:spelunker_check_type = 2:
-  autocmd CursorHold *.vim,*.js,*.jsx,*.json,*.md call spelunker#check_displayed_words()
+  autocmd CursorHold *.vim,*.js,*.jsx,*.json call spelunker#check_displayed_words()
 augroup END
 
 " Override highlight group name of incorrectly spelled words. (default:
@@ -238,11 +249,4 @@ let g:spelunker_complex_or_compound_word_group = 'SpelunkerComplexOrCompoundWord
 highlight SpelunkerSpellBad cterm=underline ctermfg=247 gui=underline guifg=#9e9e9e
 highlight SpelunkerComplexOrCompoundWord cterm=underline ctermfg=NONE gui=underline guifg=NONE
 
-
-set guifont=Hack\ Nerd\ Font:h14
-
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
