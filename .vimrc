@@ -151,6 +151,11 @@ set tabstop=4
 " Mouse middle copy
 set mouse=r
 
+
+" define spaces within VIM
+" https://groups.google.com/g/vim_dev/c/gI8ArB_1AUQ?pli=1i
+set listchars=eol:¶,tab:\|_,extends:>,precedes:<,conceal:*,nbsp:·
+set list
 "------------------------------------------------------------
 " Mappings {{{1
 "
