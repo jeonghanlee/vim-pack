@@ -16,9 +16,6 @@
 [submodule "plugins/start/syntastic"]
 	path = plugins/start/syntastic
 	url = https://github.com/vim-syntastic/syntastic
-[submodule "plugins/start/spelunker"]
-	path = plugins/start/spelunker
-	url = https://github.com/kamykn/spelunker.vim
 [submodule "plugins/start/popup-menu"]
 	path = plugins/start/popup-menu
 	url = https://github.com/kamykn/popup-menu.nvim
@@ -28,3 +25,6 @@
 [submodule "plugins/start/taglist"]
 	path = plugins/start/taglist
 	url = https://github.com/yegappan/taglist
+[submodule "plugins/start/ale"]
+	path = plugins/start/ale
+	url = https://github.com/dense-analysis/ale

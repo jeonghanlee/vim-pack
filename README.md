@@ -66,6 +66,24 @@ sudo dnf install ctags-etags vim-powerline
 bash submodule_update.bash
 ```
 
+## How to add new module
+
+We would like to add `https://github.com/dense-analysis/ale.git` module.
+So one can do this
+
+```
+vim-pack (main)$ bash add_mod.bash https://github.com/dense-analysis ale
+vim-pack (main)$ git st
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   .gitmodules
+	new file:   plugins/start/ale
+
+```
+
 ### Required Packages
 
 * taglist: exuberant-ctags (sudo apt install exuberant-ctags) 
