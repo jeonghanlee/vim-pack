@@ -4,42 +4,38 @@ So many struggles to figure out how to setup the VIM plugins using built-in pack
 
 ## Procedure
 
-### How to build this
+### 1. Installation
+Existing plugins are managed as Git submodules. To install everything at once, use the `--recursive` flag:
 
 ```bash
-mkdir ~/.vim
+mkdir -p ~/.vim
 cd ~/.vim
-git clone https://github.com/jeonghanlee/vim-pack pack
-cd pack
-git submodule add https://github.com/scrooloose/nerdtree plugins/start/nerdtree
-git submodule add https://github.com/Xuyuanp/nerdtree-git-plugin plugins/start/nerdtree-git-plugin
-git submodule add https://github.com/rakr/vim-one.git colors/start/one
-git submodule add https://github.com/vim-airline/vim-airline plugins/start/vim-airline
-git submodule add https://github.com/voldikss/vim-floaterm plugins/start/vim-floaterm
-git submodule add https://github.com/vim-syntastic/syntastic plugins/start/syntastic
-git submodule add https://github.com/JuliaEditorSupport/julia-vim.git plugins/start/julia-vim
-git commit -m "..."
-git push
+# Clone the repository with all submodules included
+git clone --recursive https://github.com/jeonghanlee/vim-pack pack
 ```
 
-### How to configure it
+*Note: If you already cloned it without submodules, run `git submodule update --init --recursive` inside the pack directory.*
+
+### 2. Configuration
+Run the initialization script to link configurations:
 
 ```bash
-mkdir ~/.vim
-cd ~/.vim
-git clone https://github.com/jeonghanlee/vim-pack
-cd vim-pack
+cd ~/.vim/pack
 bash init.bash
 ```
-### Required packages
 
+### 3. Required System Packages
+To enable full functionality for all plugins (like fuzzy search and status icons), install the following:
 
 ```bash
-sudo apt install exuberant-ctags powerline
+# Ubuntu/Debian
+sudo apt install exuberant-ctags powerline fzf silversearcher-ag
 
-sudo dnf install ctags-etags vim-powerline 
-
+# Fedora/RHEL
+sudo dnf install ctags-etags vim-powerline fzf the_silver_searcher
 ```
+
+---
 
 ### Restart it
 
@@ -48,47 +44,41 @@ sudo dnf install ctags-etags vim-powerline
 |**Figure 1** : VIM screen with the pack configuration. |
 
 ### Plugins List
+* **File Explorer**: [nerdtree](https://github.com/scrooloose/nerdtree), [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
+* **Status Bar**: [vim-airline](https://github.com/vim-airline/vim-airline)
+* **Terminal**: [vim-floaterm](https://github.com/voldikss/vim-floaterm)
+* **Linter**: [ale](https://github.com/dense-analysis/ale)
+* **Search**: [fzf.vim](https://github.com/junegunn/fzf.vim)
+* **Editing**: [vim-commentary](https://github.com/tpope/vim-commentary), [vim-surround](https://github.com/tpope/vim-surround), [indentLine](https://github.com/Yggdroot/indentLine)
+* **Git**: [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+* **Others**: [julia-vim](https://github.com/JuliaEditorSupport/julia-vim), [taglist](https://github.com/yegappan/taglist)
 
-* nerdtree: https://github.com/scrooloose/nerdtree
-* nerdtree-git-plugin: https://github.com/Xuyuanp/nerdtree-git-plugin
-* one: https://github.com/rakr/vim-one.git
-* vim-airline: https://github.com/vim-airline/vim-airline
-* vim-floaterm: https://github.com/voldikss/vim-floaterm
-* syntastic: https://github.com/vim-syntastic/syntastic
-* spelunker: https://github.com/kamykn/spelunker.vim
-* popup-menu: https://github.com/kamykn/spelunker.vim
-* julia-vim: https://github.com/JuliaEditorSupport/julia-vim
-* taglist: https://github.com/yegappan/taglist
+---
 
-### Update submodules 
+## Usage and Key Mappings
+
+Detailed instructions on how to use these plugins and a full list of custom key mappings (including the **Backspace** leader key setup) are available here:
+
+**[Detailed Plugin Usage & Key Mappings Guide](./README_PluginUsage.md)**
+
+---
+
+## Maintenance (For Developers)
+
+### How to add a new module
+To add a new plugin to your pack configuration:
+
+```bash
+# Usage: bash add_mod.bash [BASE_URL] [MODULE_NAME]
+bash add_mod.bash https://github.com/junegunn fzf.vim
+```
+
+### Update submodules
+To update all installed plugins to their latest versions:
 
 ```bash
 bash submodule_update.bash
 ```
-
-## How to add new module
-
-We would like to add `https://github.com/dense-analysis/ale.git` module.
-So one can do this
-
-```
-vim-pack (main)$ bash add_mod.bash https://github.com/dense-analysis ale
-vim-pack (main)$ git st
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-	modified:   .gitmodules
-	new file:   plugins/start/ale
-
-```
-
-### Required Packages
-
-* taglist: exuberant-ctags (sudo apt install exuberant-ctags) 
-
-exuberant-ctags
 
 ## References
 [1] https://medium.com/@paulodiovani/installing-vim-8-plugins-with-the-native-pack-system-39b71c351fea

@@ -28,3 +28,18 @@
 [submodule "plugins/start/ale"]
 	path = plugins/start/ale
 	url = https://github.com/dense-analysis/ale
+[submodule "plugins/start/fzf.vim"]
+	path = plugins/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
+[submodule "plugins/start/vim-surround"]
+	path = plugins/start/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "plugins/start/vim-commentary"]
+	path = plugins/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary
+[submodule "plugins/start/gitsigns.nvim"]
+	path = plugins/start/gitsigns.nvim
+	url = https://github.com/lewis6991/gitsigns.nvim
+[submodule "plugins/start/indentLine"]
+	path = plugins/start/indentLine
+	url = https://github.com/Yggdroot/indentLine
