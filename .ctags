@@ -1,3 +1,19 @@
---langdef=markdown
---langmap=markdown:.md
---regex-markdown=/^#[ \t](.*$)/\1/h,heading,headings/
+# -----------------------------------------------------------
+# Universal Ctags Configuration
+# -----------------------------------------------------------
+
+# --- General Settings ---
+# Enable recursive search by default
+--recurse=yes
+
+# Exclude unnecessary directories for better performance
+--exclude=.git
+--exclude=node_modules
+--exclude=dist
+--exclude=.vim
+--exclude=*.json
+--exclude=*.min.js
+
+# --- Language Specifics ---
+# universal-ctags handles Markdown automatically,
+# but you can add custom flags here if needed.
