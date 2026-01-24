@@ -13,12 +13,20 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " --- vim-airline: Status Bar ---
 let g:airline_powerline_fonts = 1
+" Disable Taglist extension to prevent E565 error
+" Airline tries to switch windows to check tags, which causes a crash.
+let g:airline#extensions#taglist#enabled = 0
+
 
 " --- vim-floaterm: Terminal ---
 " Automatically close the terminal window when the process exits
 let g:floaterm_autoclose = 1
-" Terminate the terminal job when Vim is closed
-let g:floaterm_terminate_on_exit = 1
+
+augroup FloatermAutoKill
+  autocmd!
+  autocmd QuitPre * if winnr('$') == 1 | try | FloatermKill! | catch | endtry | endif
+augroup END
+
 
 " --- ALE (Asynchronous Lint Engine) ---
 let g:ale_completion_enabled = 1
