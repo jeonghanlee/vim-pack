@@ -38,7 +38,14 @@ sudo apt install -y vim-gtk3 universal-ctags powerline fzf silversearcher-ag
 sudo dnf install vim-X11 universal-ctags vim-powerline fzf the_silver_searcher
 ```
 
----
+## Execution Example
+
+Below is an example of the environment running on a terminal. It shows the Floaterm window overlaying the editor, displaying the file structure inside the .vim/pack directory.
+
+|![vim_packpng](vim_pack.png)|
+| :---: |
+|**Figure 1** : VIM screen with the pack configuration. |
+
 
 ## Usage and Key Mappings
 
