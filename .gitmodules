@@ -13,9 +13,6 @@
 [submodule "plugins/start/vim-floaterm"]
 	path = plugins/start/vim-floaterm
 	url = https://github.com/voldikss/vim-floaterm
-[submodule "plugins/start/syntastic"]
-	path = plugins/start/syntastic
-	url = https://github.com/vim-syntastic/syntastic
 [submodule "plugins/start/popup-menu"]
 	path = plugins/start/popup-menu
 	url = https://github.com/kamykn/popup-menu.nvim
