@@ -57,7 +57,6 @@ This guide provides a detailed look at how to use the installed plugins and cust
 | Key | Action |
 | :--- | :--- |
 | `Ctrl + s` | Save current file (Works in Normal & Insert mode). |
-| `Ctrl + c` | Copy visual selection to system clipboard. |
 | `F5` | Insert current system date and time. |
 | `F11` | Toggle 'paste' mode. |
 | `Ctrl + Arrows` | Move focus between split windows (Works in Terminal mode). |
@@ -69,3 +68,19 @@ This guide provides a detailed look at how to use the installed plugins and cust
 | `Backspace + l` | Toggle relative line numbers. |
 | `Ctrl + l` | Clear search highlighting. |
 | `Y` | Yank from cursor position to the end of the line. |
+
+---
+
+## 5. Clipboard & Mouse Integration
+
+This configuration connects Vim's registers to the system clipboard for seamless copy-paste between Vim and external applications (Browser, Terminal, etc.).
+
+### Copying (Vim -> External)
+* **`Ctrl + c` (Visual Mode):** Copies the selected text to the system clipboard (`+` register).
+* **`y` (Yank):** Due to `clipboard=unnamedplus` settings, yanking text (e.g., `yy`, `y$`) also copies it to the system clipboard.
+    * *Usage:* Select text in Vim -> Press `y` -> Paste externally using `Ctrl + V` or Right Click.
+
+### Pasting (External -> Vim)
+* **Middle Mouse Button (Wheel Click):** Pastes text from the **Primary Selection** (text currently highlighted/selected with a mouse outside Vim).
+    * *Mapping:* `noremap <MiddleMouse> "*p`
+    * *Usage:* Highlight text in a browser (no need to press Ctrl+C) -> Click Middle Mouse Button inside Vim.

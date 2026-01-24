@@ -12,6 +12,7 @@ nnoremap <C-L> :nohl<CR><C-L>
 vnoremap <C-c> "+y
 
 " Quickly save the file with Ctrl+S (Normal & Insert mode)
+" Note: Ensure 'stty -ixon' is in your shell config to prevent freezing
 nnoremap <C-S> :w<CR>
 inoremap <C-S> <Esc>:w<CR>a
 
@@ -50,7 +51,27 @@ nnoremap <leader>l :set localnumber!<CR>
 " Search and replace the word under the cursor globally
 nnoremap <leader>r :%s/\<<C-r><C-w>\>//gI<Left><Left><Left>
 
-" Plugin Fallbacks: Alternatives for F12, F8, and Ctrl+n
+" Plugin Toggles
 nnoremap <leader>t :FloatermToggle<CR>
 nnoremap <leader>y :TlistToggle<CR>
 nnoremap <leader>e :NERDTreeToggle<CR>
+
+" Function keys support (Alternative)
+nnoremap <F12> :FloatermToggle<CR>
+tnoremap <F12> <C-\><C-n>:FloatermToggle<CR>
+nnoremap <F8> :TlistToggle<CR>
+
+" -----------------------------------------------------------
+" Mouse Middle Click Mapping
+" -----------------------------------------------------------
+
+" Paste with mouse middle click in Normal and Insert modes
+" <MiddleMouse> represents the mouse wheel click.
+
+" "*p pastes from the Primary selection (highlighted text)
+" This allows pasting text you just highlighted with the mouse
+noremap <MiddleMouse> "*p
+
+" <C-r>* inserts the content of the Primary selection while in Insert mode
+inoremap <MiddleMouse> <C-r>*
+
