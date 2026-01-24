@@ -2,8 +2,9 @@
 # Universal Ctags Configuration
 # -----------------------------------------------------------
 
-# --- General Settings ---
-# Enable recursive search by default
+# Use '#' for comments instead of '"' to avoid 'non-option' warnings
+# Ensure there are no leading/trailing spaces in the lines below
+
 --recurse=yes
 
 # Exclude unnecessary directories for better performance
@@ -15,5 +16,5 @@
 --exclude=*.min.js
 
 # --- Language Specifics ---
-# universal-ctags handles Markdown automatically,
-# but you can add custom flags here if needed.
+# universal-ctags handles Markdown automatically.
+# If warnings persist, ensure universal-ctags is actually being used.
