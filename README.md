@@ -11,7 +11,7 @@ Plugins are managed as Git submodules. To install correctly within the Vim 8 pac
 mkdir -p ~/.vim
 cd ~/.vim
 # Clone the repository into the .vim directory
-git clone --recursive [https://github.com/jeonghanlee/vim-pack](https://github.com/jeonghanlee/vim-pack) pack
+git clone --recursive https://github.com/jeonghanlee/vim-pack pack
 ```
 
 ### 2. Configuration
@@ -57,7 +57,7 @@ This configuration uses **Backspace** as the `<leader>` key for stable and fast 
 ### How to add a new module
 ```bash
 # Usage: bash add_mod.bash [BASE_URL] [MODULE_NAME]
-bash add_mod.bash [https://github.com/junegunn](https://github.com/junegunn) fzf.vim
+bash add_mod.bash https://github.com/junegunn fzf.vim
 ```
 
 ### Update submodules
