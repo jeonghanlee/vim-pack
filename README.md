@@ -25,15 +25,17 @@ bash init.bash
 *Note: This script links `~/.vim/pack/.vimrc` to `~/.vimrc` and handles `.ctags` as well.*
 
 ### 3. Required System Packages
-To enable full functionality (fuzzy search, status bar icons, and code tagging), install the following:
+To enable full functionality (**system clipboard support**, fuzzy search, status bar icons, and code tagging), install the following:
 
 ```bash
 # Ubuntu/Debian
+# 'vim-gtk3' is required for system clipboard integration (+clipboard)
 sudo apt update
-sudo apt install -y universal-ctags powerline fzf silversearcher-ag
+sudo apt install -y vim-gtk3 universal-ctags powerline fzf silversearcher-ag
 
 # Fedora/RHEL
-sudo dnf install universal-ctags vim-powerline fzf the_silver_searcher
+# 'vim-X11' is required for system clipboard integration
+sudo dnf install vim-X11 universal-ctags vim-powerline fzf the_silver_searcher
 ```
 
 ---

@@ -71,18 +71,25 @@ This guide provides a detailed look at how to use the installed plugins and cust
 | `Y` | Yank from cursor position to the end of the line. |
 
 ---
-
 ## 5. Clipboard & Mouse Integration
 
 This configuration connects Vim's registers to the system clipboard for seamless copy-paste between Vim and external applications (Browser, Terminal, etc.).
 
+> **Prerequisite**
+> To use these clipboard features, your Vim must be compiled with `+clipboard` support.
+> * Ubuntu/Debian: Install `vim-gtk3` (`sudo apt install vim-gtk3`)
+> * Fedora/RHEL: Install `vim-X11` (`sudo dnf install vim-X11`)
+> * Check support by running `:version` in Vim and looking for `+clipboard`.
+
 ### Copying (Vim -> External)
-* **`Ctrl + c` (Visual Mode):** Copies the selected text to the system clipboard (`+` register).
-* **`y` (Yank):** Copies to the system clipboard as well (due to `clipboard=unnamedplus`).
-    * *Usage:* Select text in Vim -> Press `y` -> Paste externally using `Ctrl + V`.
+* `Ctrl + c` (Visual Mode): Copies the selected text directly to the system clipboard (`+` register).
+* `y` (Yank): Due to `clipboard=unnamedplus` settings, yanking text (e.g., `yy`, `y$`) also copies it to the system clipboard.
+    * Usage: Select text in Vim -> Press `y` -> Paste externally using `Ctrl + V` or Right Click.
 
 ### Pasting (External -> Vim)
-* **Middle Mouse Button (Wheel Click):** Pastes text from the **Primary Selection** (text currently highlighted/selected with a mouse outside Vim).
-    * *Mapping:* `noremap <MiddleMouse> "*p`
-    * *Usage:* Highlight text in a browser (no need to press Ctrl+C) -> Click Middle Mouse Button inside Vim.
-* **`Ctrl + V` (System Paste):** Not mapped by default in Vim Normal mode. Use **`Shift + Insert`** or **`Middle Click`** (if configured) or standard paste (`p`) if copied via `Ctrl+C` externally.
+* Middle Mouse Button (Wheel Click): Pastes text from the **Primary Selection** (text currently highlighted/selected with a mouse outside Vim).
+    * Mapping: `noremap <MiddleMouse> "*p`
+    * Usage: Highlight text in a browser (no need to press Ctrl+C) -> Click Middle Mouse Button inside Vim.
+* `Ctrl + V` (System Paste): Not mapped by default in Vim Normal mode to avoid conflicts.
+    * Alternative 1: Use `Shift + Insert` (Standard Linux paste).
+    * Alternative 2: Use standard Vim paste (`p`) in Normal mode if the text was copied via `Ctrl+C` externally.
