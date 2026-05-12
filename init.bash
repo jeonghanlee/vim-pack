@@ -1,22 +1,35 @@
 #!/usr/bin/env bash
 
 # -----------------------------------------------------------
-# Get the absolute path of the script directory
+# Global configuration variables
 # -----------------------------------------------------------
+readonly DIVIDER_LINE="-----------------------------------------------------------"
+readonly MSG_FORMAT="%s\n"
+
 declare -g SC_SCRIPT
 declare -g SC_TOP
 SC_SCRIPT=$(readlink -f "${BASH_SOURCE[0]:-${0}}")
-SC_TOP="$( cd -P "$( dirname "$SC_SCRIPT" )" && pwd )"
+SC_TOP="$( cd -P "$( dirname "${SC_SCRIPT}" )" && pwd )"
 
 # -----------------------------------------------------------
-# Initialize submodules and create symbolic links
+# Helper functions
 # -----------------------------------------------------------
-echo "Initializing git submodules..."
-cd "${SC_TOP}"
+print_divider() {
+    printf "${MSG_FORMAT}" "${DIVIDER_LINE}"
+}
+
+# -----------------------------------------------------------
+# Submodule and symlink setup
+# -----------------------------------------------------------
+print_divider
+printf "Initializing git submodules at: %s\n" "${SC_TOP}"
+cd "${SC_TOP}" || exit 1
 git submodule update --init --recursive
 
-echo "Creating symbolic links..."
+print_divider
+printf "Creating symbolic links in: %s\n" "${HOME}"
 ln -snf "${SC_TOP}/.vimrc" "${HOME}/.vimrc"
 ln -snf "${SC_TOP}/.ctags" "${HOME}/.ctags"
 
-echo "Installation complete. universal-ctags is now ready."
+print_divider
+printf "${MSG_FORMAT}" "Installation complete."
